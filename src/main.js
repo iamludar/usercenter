@@ -28,7 +28,7 @@ router.beforeEach(function(to, from ,next) {
 		localStorage.clear()
 	}
 	if ( localStorage.getItem("openid") === null && to.query.code === undefined){
-	 	window.location.href = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx4046698f09250bd7&redirect_uri=http://jfd.04wu.com&response_type=code&scope=snsapi_base&state=123#wechat_redirect"
+	 	window.location.href = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx4046698f09250bd7&redirect_uri=http://usercenter.04wu.com&response_type=code&scope=snsapi_base&state=123#wechat_redirect"
 	} else if( localStorage.getItem("openid") === null && to.query.code !== undefined){
 	 	next()
 	}else{
